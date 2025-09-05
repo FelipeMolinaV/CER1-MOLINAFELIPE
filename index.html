@@ -10,31 +10,29 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-    
+    <script src="js/menu.js"></script> 
 </head>
 <body class="bg-black">
     <header>
-        <nav class="bg-slate-500  h-[10vh] flex-row">
+        <nav class="bg-slate-500 h-[10vh] flex-row md:flex">
             <div class="flex items-center justify-between px-[8vw]">
                 <img src="img/logo.png" alt="" class="max-h-[10vh]  object-fill">
                 <ion-icon id="boton_menu" name="menu-outline" onclick="desplegar_menu(this)" 
-                class="text-3xl invert hover:scale-115 transition-transform"></ion-icon>
+                class="text-3xl invert hover:scale-115 transition-transform md:hidden"></ion-icon>
             </div>
-            <ul id="menu" class="text-white z-90 px-[8vw] static bg-slate-600 w-full left-0 opacity-0
-            pt-[1vh]">
-                <li class="py-[2vw]">
+            <ul id="menu" class="text-white z-90 px-[8vw] static bg-slate-600 w-full left-0 opacity-100
+            pt-[1vh] md:bg-transparent md:flex md:items-center md:justify-end md:px-[5vw]">
+                <li class="py-[2vw] md:px-[3vw]">
                     <a href="" class="text-lg hover:text-cyan-300 duration-200">Principal</a>
                 </li>
-                <li class="py-[2vw]">
+                <li class="py-[2vw] md:px-[3vw]">
                     <a href="" class="text-lg hover:text-cyan-300 duration-200">Eventos</a>
                 </li>
-                <li class="py-[2vw] ">
+                <li class="py-[2vw] md:px-[3vw]">
                     <a href="" class="text-lg hover:text-cyan-300 duration-200">Comunidad</a>
                 </li>
             </ul>
         </nav>
     </header>
-
-    <script src="/js/menu.js"></script> 
 </body>
 </html>
