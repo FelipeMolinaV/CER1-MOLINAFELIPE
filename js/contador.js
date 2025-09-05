@@ -52,6 +52,6 @@ function contador(){
     }
 }
 
-setInterval(contador, 1000)
+//setInterval(contador, 1000)
 
 
