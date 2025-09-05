@@ -142,35 +142,42 @@
         </div>
     </section>
 
-    <section id="comunidad" class="bg-slate-700 h-[80vh]">
-        <div class="flex flex-col py-[3vh] px-[3vw] overflow-auto gap-2">
-            <div id="caja_comentarios" class="bg-slate-800 h-[35vh] flex flex-col gap-2">
-                <div id="comentario" class="bg-slate-200 rounded flex flex-col px-[2vw] gap-[1vh]">
+    <section id="comunidad" class="bg-slate-700 min-h-[85vh] md:py-[4vh]">
+        <div class="grid grid-cols-2 grid-rows-4 py-[3vh] px-[3vw] overflow-auto 
+        md:grid-cols-2 md:grid-rows-4 md:gap-3">
+            <div id="caja_comentarios" class="bg-slate-800 col-span-2 rounded row-span-2 h-[35vh] flex flex-col gap-4
+            md:col-span-1 md:row-span-4 md:h-[70vh] overflow-auto">
+                <div id="comentario" class="bg-slate-200 rounded flex flex-col px-[2vw] gap-[1vh]
+                md:px-[1vw]">
                     <div class="flex justify-between">
                         <h1 id="alias" class="text-sm">Usuario1</h1>
-                        <h1 id="fecha" class="text-sm">09/09/1999</h1>
+                        <h1 id="fecha" class="text-sm">09/09/1999 - 10:30</h1>
                     </div>    
-                    <div class="bg-slate-100 rounded">
-                        <p class="text-ms min-h-[16vh]">
+                    <div class="bg-slate-100 rounded ">
+                        <p class="text-ms min-h-[18vh] ">
                             Primer comentario!
                         </p>
                     </div>
                 </div>
+                
             </div>
-            <div id="formulario ">
-                <div class="bg-slate-200 flex flex-col min-h-[39vh] px-[2vw] py-[1vw] gap-3">
+            <div id="formulario" class="col-span-2 row-span-2 my-[-1vh] 
+            md:py-[1vh] md:col-span-1 md:row-span-4">
+                <div class="bg-slate-200 flex flex-col min-h-[39vh] px-[2vw] py-[1vw] gap-3 rounded
+                md:h-[70vh] ">
                     <div class="flex flex-col">
                         <label for="nombre" class="text-sm">Nombre / Alias* :</label>
-                        <input type="text" class="bg-slate-500 rounded text-ms text-white" placeholder="Nombre" required>
+                        <input type="text" class="bg-slate-500 rounded text-ms text-white " placeholder="Nombre" required>
                     </div>
                     <div class="flex flex-col">
-                        <label for="mensaje">Mensaje : </label>
+                        <label for="mensaje">Mensaje*: </label>
                         <textarea name="" id="" maxlength="500" placeholder="Mensaje..." 
                         class="bg-slate-500 h-[15vh] rounded text-ms text-white">
                         </textarea>
                     </div>
                     <div class="flex justify-center">
-                        <button class="bg-slate-400 rounded w-[30vw] hover:scale-105 transition-transform">
+                        <button class="bg-slate-400 rounded w-[30vw] hover:scale-105 transition-transform
+                        md:w-[12vw] md:my-[10vh]">
                             Publicar
                         </button>
                     </div>
@@ -180,7 +187,7 @@
         </div>
     </section>
 
-    <footer class="bg-slate-500 h-[10vh]">
+    <footer class="bg-black h-[5vh]">
     </footer>
 
     
