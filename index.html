@@ -10,7 +10,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-    <script src="js/menu.js"></script> 
+    <script src="js/funciones.js"></script> 
 </head>
 <body class="bg-black">
 
@@ -21,16 +21,16 @@
                 <ion-icon id="boton_menu" name="menu-outline" onclick="desplegar_menu(this)" 
                 class="text-3xl invert hover:scale-115 transition-transform md:hidden"></ion-icon>
             </div>
-            <ul id="menu" class="text-white z-50 px-[8vw] static bg-slate-600 w-full left-0 opacity-0
-            pt-[1vh] md:bg-transparent md:flex md:items-center md:justify-end md:px-[5vw] md:opacity-100 ">
+            <ul id="menu" class="text-white px-[8vw] static bg-slate-600 w-full left-0 opacity-0
+            pt-[1vh] md:bg-transparent md:flex md:items-center md:justify-end md:px-[5vw] md:opacity-100 pointer-events-none">
                 <li class="py-[2vw] md:px-[3vw]">
-                    <a href="#" class="text-lg hover:text-cyan-300/50 duration-200 d">Principal</a>
+                    <a href="#" onclick="cerrar_menu()" class="text-lg hover:text-cyan-300/50 duration-200 d">Principal</a>
                 </li>
                 <li class="py-[2vw] md:px-[3vw]">
-                    <a href="#eventos" class="text-lg hover:text-cyan-300/50 duration-200">Eventos</a>
+                    <a href="#eventos" onclick="cerrar_menu()" class="text-lg hover:text-cyan-300/50 duration-200">Eventos</a>
                 </li>
                 <li class="py-[2vw] md:px-[3vw]">
-                    <a href="#comunidad" class="text-lg hover:text-cyan-300/50 duration-200">Comunidad</a>
+                    <a href="#comunidad" onclick="cerrar_menu()" class="text-lg hover:text-cyan-300/50 duration-200">Comunidad</a>
                 </li>
             </ul>
         </nav>
@@ -89,22 +89,40 @@
 
     <section id="eventos" class="bg-slate-200 h-[90vh] scroll-mt-[10vh] py-[10vh]">
         <div class="h-[90vh] grid grid-cols-3 grid-rows-4 gap-5 px-[10vw]">
+
             <div class="col-span-3 row-span-1 bg-black flex-col justify-end relative
-            rounded overflow-hidden text-white">
-                <div class="flex flex-col absolute top-1 left-2 ">
+            rounded overflow-hidden text-white hover:scale-105 transtion">
+                <div class="flex flex-col absolute top-1 left-2 z-10">
                     <h1 class="text-lg">Cine clasico</h1>
-                    <h2 class="text-sm">09/09/2025 - 19:30h</h2>
+                    <h2 class="text-sm">09/09/25 - 19:30h</h2>
                 </div>
                 <img src="img/audience.jpg" alt="" class="absolute h-[20vh] 
-                w-[40vw] opacity-85 object-cover -right-2">
+                w-[40vw] opacity-85 object-cover -right-2 z-0">
                 <h1 class="absolute bottom-2 left-2">5000 CL</h1>
             </div>
-            <div class="col-span-3 row-span-1 bg-emerald-500">
-                Card1
+
+            <div class="col-span-3 row-span-1 bg-cyan-950 flex-col justify-end relative
+            rounded overflow-hidden text-white hover:scale-105 transtion">
+                <div class="flex flex-col absolute top-1 left-2 z-10">
+                    <h1 class="text-lg">Conferencia</h1>
+                    <h2 class="text-sm">25/10/25 - 13:00h</h2>
+                </div>
+                <img src="img/conference.jpg" alt="" class="absolute h-[20vh] 
+                w-[40vw] opacity-85 object-cover -right-2 z-0">
+                <h1 class="absolute bottom-2 left-2">3500 CL</h1>
             </div>
-            <div class="col-span-3 row-span-1 bg-emerald-500">
-                Card1
+
+            <div class="col-span-3 row-span-1 bg-red-950 flex-col justify-end relative
+            rounded overflow-hidden text-white hover:scale-105 transtion">
+                <div class="flex flex-col absolute top-1 left-2 z-10">
+                    <h1 class="text-lg">Robotica</h1>
+                    <h2 class="text-sm">01/11/25 - 15:00h</h2>
+                </div>
+                <img src="img/robotica.jpg" alt="" class="absolute h-[20vh] 
+                w-[40vw] opacity-85 object-cover -right-2 z-0">
+                <h1 class="absolute bottom-2 left-2">1000 CL</h1>
             </div>
+            
         </div>
     </section>
 
