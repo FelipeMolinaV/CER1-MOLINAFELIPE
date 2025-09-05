@@ -13,6 +13,7 @@
     <script src="js/funciones.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
     <script src="js/contador.js"></script>
+    <script src="js/publicar.js"></script>
 </head>
 <body onmouseover="contador()" class="bg-black">
 
@@ -153,8 +154,8 @@
                         <h1 id="alias" class="text-sm">Usuario1</h1>
                         <h1 id="fecha" class="text-sm">09/09/1999 - 10:30</h1>
                     </div>    
-                    <div class="bg-slate-100 rounded ">
-                        <p class="text-ms min-h-[18vh] ">
+                    <div class="bg-slate-100 rounded mb-[1vh]">
+                        <p id="comentario_texto" class="text-ms min-h-[18vh] px-[1vw] text-left font-thin">
                             Primer comentario!
                         </p>
                     </div>
@@ -167,17 +168,18 @@
                 md:h-[70vh] ">
                     <div class="flex flex-col">
                         <label for="nombre" class="text-sm">Nombre / Alias* :</label>
-                        <input type="text" class="bg-slate-500 rounded text-ms text-white " placeholder="Nombre" required>
+                        <input id="usuario" type="text" class="bg-slate-500 rounded text-ms text-white font-thin " placeholder="Nombre" required>
                     </div>
                     <div class="flex flex-col">
                         <label for="mensaje">Mensaje*: </label>
-                        <textarea name="" id="" maxlength="500" placeholder="Mensaje..." 
-                        class="bg-slate-500 h-[15vh] rounded text-ms text-white">
+                        <textarea id="mensaje" name="" id="" maxlength="500" placeholder="Mensaje..." 
+                        class="bg-slate-500 h-[15vh] rounded text-ms text-white font-thin
+                        md:h-[40vh]">
                         </textarea>
                     </div>
                     <div class="flex justify-center">
-                        <button class="bg-slate-400 rounded w-[30vw] hover:scale-105 transition-transform
-                        md:w-[12vw] md:my-[10vh]">
+                        <button onclick="publicar()" class="bg-slate-400 rounded w-[30vw] hover:scale-105 transition-transform
+                        md:w-[12vw] md:my-[2vh] text-white font-semibold">
                             Publicar
                         </button>
                     </div>
