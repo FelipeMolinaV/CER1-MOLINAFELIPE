@@ -12,17 +12,18 @@
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <script src="js/funciones.js"></script> 
 </head>
-<body class="bg-black">
+<body onmouseover="actualizar_contador()" class="bg-black">
 
     <header class="fixed top-0 left-0 w-full z-50">
-        <nav class="bg-slate-500 h-[10vh] flex-row md:flex">
+        <nav class="bg-black h-[10vh] flex-row md:flex">
             <div class="flex items-center justify-between px-[8vw]">
                 <img src="img/logo.png" alt="" class="max-h-[10vh]  object-fill">
                 <ion-icon id="boton_menu" name="menu-outline" onclick="desplegar_menu(this)" 
                 class="text-3xl invert hover:scale-115 transition-transform md:hidden"></ion-icon>
             </div>
             <ul id="menu" class="text-white px-[8vw] static bg-slate-600 w-full left-0 opacity-0
-            pt-[1vh] md:bg-transparent md:flex md:items-center md:justify-end md:px-[5vw] md:opacity-100 pointer-events-none">
+            pt-[1vh] md:bg-transparent md:flex md:items-center md:justify-end 
+            md:px-[5vw] md:opacity-100 pointer-events-none md:pointer-events-auto">
                 <li class="py-[2vw] md:px-[3vw]">
                     <a href="#" onclick="cerrar_menu()" class="text-lg hover:text-cyan-300/50 duration-200 d">Principal</a>
                 </li>
@@ -39,35 +40,35 @@
     <main id="principal" class="text-white mt-[10vh] bg-slate-950 h-[90vh]">
         <div class="md:flex md:items-center md:py-[3vh]">
             <div class="flex flex-col justify-center text-center py-[5vh]
-            hover:scale-97 transition-transform hover:cursor-crosshair 
+            hover:scale-97 transition-transform 
             md:py-[5vh] md:px-[5vw]">
                 <h1 class="py-[2vh] text-5xl z-10 font-bold font-mono md:text-6xl md:py-[0]">
                     Concierto
                 </h1>
-                <img src="img/concert.jpg" alt="" class="h-[30vh] w-[90vw] z-0 mx-auto object-cover 
+                <img src="img/concert2.jpg" alt="" class="h-[30vh] w-[90vw] z-0 mx-auto object-cover 
                 my-[-5vh] opacity-50 md:h-[60vh] md:w-[60vw]">
                 <div class="flex items-center justify-center my-[-4vh] gap-3 z-10">
                     <div class="bg-gradient-to-br from-slate-100/80 via-slate-200/10 
                     to-slate-300/50 rounded ">
-                        <h1 class="text-5xl px-[1vh] font-thin">00</h1>
+                        <h1 id="dias" class="text-5xl px-[1vh] font-thin">00</h1>
                         <h2 class="my-[vh] font-thin">
                             dias
                         </h2>
                     </div>
                     <div class="bg-gradient-to-br from-slate-100/80 via-slate-200/10 to-slate-300/50 rounded ">
-                        <h1 class="text-5xl px-[1vh] font-thin">00</h1>
+                        <h1 id="horas" class="text-5xl px-[1vh] font-thin">00</h1>
                         <h2 class="my-[vh] font-thin">
                             horas
                         </h2>
                     </div>
                     <div class="bg-gradient-to-br from-slate-100/80 via-slate-200/10 to-slate-300/50 rounded ">
-                        <h1 class="text-5xl px-[1vh] font-thin">00</h1>
+                        <h1 id="minutos" class="text-5xl px-[1vh] font-thin">00</h1>
                         <h2 class="my-[vh] font-thin">
                             min
                         </h2>
                     </div>
                     <div class="bg-gradient-to-br from-slate-100/80 via-slate-200/10 to-slate-300/50 rounded ">
-                        <h1 class="text-5xl px-[1vh] font-thin">00</h1>
+                        <h1 id="segundos" class="text-5xl px-[1vh] font-thin">00</h1>
                         <h2 class="my-[vh] font-thin">
                             seg
                         </h2>
@@ -87,40 +88,53 @@
         </div>
     </main>
 
-    <section id="eventos" class="bg-slate-200 h-[90vh] scroll-mt-[10vh] py-[10vh]">
-        <div class="h-[90vh] grid grid-cols-3 grid-rows-4 gap-5 px-[10vw]">
+    <section id="eventos" class="bg-slate-200 h-[90vh] scroll-mt-[10vh] py-[10vh] md:py-[10vh]">
+        <div class="h-[90vh] grid grid-cols-3 grid-rows-4 gap-5 px-[10vw]
+        md:grid-rows-2 md:max-h-[70vh] md:gap-8">
 
             <div class="col-span-3 row-span-1 bg-black flex-col justify-end relative
-            rounded overflow-hidden text-white hover:scale-105 transtion">
+            rounded overflow-hidden text-white hover:scale-102 transition-transform hover:contrast-80
+            md:col-span-1 md:row-span-1">
                 <div class="flex flex-col absolute top-1 left-2 z-10">
-                    <h1 class="text-lg">Cine clasico</h1>
+                    <h1 class="text-lg md:text-xl">Cine clasico</h1>
                     <h2 class="text-sm">09/09/25 - 19:30h</h2>
                 </div>
                 <img src="img/audience.jpg" alt="" class="absolute h-[20vh] 
-                w-[40vw] opacity-85 object-cover -right-2 z-0">
-                <h1 class="absolute bottom-2 left-2">5000 CL</h1>
+                w-[40vw] opacity-85 object-cover -right-2 z-0
+                md:top-0 md:left-0">
+                <h1 class="absolute bottom-2 left-2 md:text-xl">
+                    5000 CL
+                </h1>
             </div>
 
             <div class="col-span-3 row-span-1 bg-cyan-950 flex-col justify-end relative
-            rounded overflow-hidden text-white hover:scale-105 transtion">
+            rounded overflow-hidden text-white hover:scale-102 hover:contrast-80 transtion
+            md:col-span-2 md:row-span-2">
                 <div class="flex flex-col absolute top-1 left-2 z-10">
-                    <h1 class="text-lg">Conferencia</h1>
+                    <h1 class="text-lg md:text-xl">Conferencia</h1>
                     <h2 class="text-sm">25/10/25 - 13:00h</h2>
                 </div>
                 <img src="img/conference.jpg" alt="" class="absolute h-[20vh] 
-                w-[40vw] opacity-85 object-cover -right-2 z-0">
-                <h1 class="absolute bottom-2 left-2">3500 CL</h1>
+                w-[40vw] opacity-85 object-cover -right-2 z-0
+                md:h-[50vh] md:w-full md:top-0 md:left-0">
+                <h1 class="absolute bottom-2 left-2 md:text-xl">
+                    3500 CL
+                </h1>
             </div>
 
             <div class="col-span-3 row-span-1 bg-red-950 flex-col justify-end relative
-            rounded overflow-hidden text-white hover:scale-105 transtion">
+            rounded overflow-hidden text-white hover:scale-102 transtion hover:contrast-80
+            md:col-span-1 md:row-span-1">
                 <div class="flex flex-col absolute top-1 left-2 z-10">
-                    <h1 class="text-lg">Robotica</h1>
+                    <h1 class="text-lg md:text-xl">Robotica</h1>
                     <h2 class="text-sm">01/11/25 - 15:00h</h2>
                 </div>
                 <img src="img/robotica.jpg" alt="" class="absolute h-[20vh] 
-                w-[40vw] opacity-85 object-cover -right-2 z-0">
-                <h1 class="absolute bottom-2 left-2">1000 CL</h1>
+                w-[40vw] opacity-85 object-cover -right-2 z-0
+                md:top-0 md:left-0">
+                <h1 class="absolute bottom-2 left-2 md:text-xl">
+                    1000 CL
+                </h1>
             </div>
             
         </div>
