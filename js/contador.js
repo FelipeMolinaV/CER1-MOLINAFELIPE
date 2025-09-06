@@ -1,7 +1,7 @@
 var intervalo = setInterval(contador, 1000);
 
 var fechaActual = dayjs(new Date)
-var fechaLimite = fechaActual.add(30, 's')
+var fechaLimite = fechaActual.add(3, 'h')
 var escalaIcono = 100;
 
 function contador(){

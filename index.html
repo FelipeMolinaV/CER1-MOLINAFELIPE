@@ -24,26 +24,26 @@
                 <ion-icon id="boton_menu" name="menu-outline" onclick="desplegar_menu(this)" 
                 class="text-3xl invert hover:scale-115 transition-transform md:hidden"></ion-icon>
             </div>
-            <ul id="menu" class="text-white px-[8vw] static bg-slate-600 w-full left-0 opacity-0
+            <ul id="menu" class="text-slate-50 px-[8vw] static bg-slate-600 w-full left-0 opacity-0
             pt-[1vh] md:bg-transparent md:flex md:items-center md:justify-end 
             md:px-[5vw] md:opacity-100 pointer-events-none md:pointer-events-auto">
                 <li class="py-[2vw] md:px-[3vw]">
-                    <a href="#" onclick="cerrar_menu()" class="text-lg hover:text-cyan-300/50 duration-200 d">Principal</a>
+                    <a href="#" onclick="cerrar_menu()" class="text-lg hover:text-cyan-300 duration-200 ">Principal</a>
                 </li>
                 <li class="py-[2vw] md:px-[3vw]">
-                    <a href="#eventos" onclick="cerrar_menu()" class="text-lg hover:text-cyan-300/50 duration-200">Eventos</a>
+                    <a href="#eventos" onclick="cerrar_menu()" class="text-lg hover:text-cyan-300 duration-200">Eventos</a>
                 </li>
                 <li class="py-[2vw] md:px-[3vw]">
-                    <a href="#comunidad" onclick="cerrar_menu()" class="text-lg hover:text-cyan-300/50 duration-200">Comunidad</a>
+                    <a href="#comunidad" onclick="cerrar_menu()" class="text-lg hover:text-cyan-300 duration-200">Comunidad</a>
                 </li>
             </ul>
         </nav>
     </header>
 
-    <main id="principal" class="text-white mt-[10vh] bg-slate-950 h-[90vh]">
+    <main id="principal" class="text-slate-50 mt-[10vh] bg-slate-950 h-[90vh]">
         <div class="md:flex md:items-center md:py-[3vh]">
             <div class="flex flex-col justify-center text-center py-[5vh]
-            hover:scale-97 transition-transform 
+            hover:scale-97 transition-transform shadow-xl
             md:py-[5vh] md:px-[5vw]">
                 <h1 class="py-[2vh] text-5xl z-10 font-bold font-mono md:text-6xl md:py-[0]">
                     Concierto
@@ -53,33 +53,36 @@
                 <div id="contador" class="flex items-center justify-center my-[-4vh] gap-3 z-10">
                     <div id="cont-dias" class="bg-gradient-to-br from-slate-100/80 via-slate-200/10 
                     to-slate-300/50 rounded ">
-                        <h1 id="dias" class="text-5xl px-[1vh] font-thin">00</h1>
+                        <h1 id="dias" class="text-5xl px-[2vh] font-thin font-mono">00</h1>
                         <h2 class="my-[vh] font-thin">
                             dias
                         </h2>
                     </div>
-                    <div id="cont-horas" class="bg-gradient-to-br from-slate-100/80 via-slate-200/10 to-slate-300/50 rounded ">
-                        <h1 id="horas" class="text-5xl px-[1vh] font-thin">00</h1>
+                    <div id="cont-horas" class="bg-gradient-to-br
+                    from-slate-100/80 via-slate-200/10 to-slate-300/50 rounded ">
+                        <h1 id="horas" class="text-5xl  px-[2vh] font-thin font-mono">00</h1>
                         <h2 class="my-[vh] font-thin">
                             horas
                         </h2>
                     </div>
-                    <div id="cont-minutos" class="bg-gradient-to-br from-slate-100/80 via-slate-200/10 to-slate-300/50 rounded ">
-                        <h1 id="minutos" class="text-5xl px-[1vh] font-thin">00</h1>
+                    <div id="cont-minutos" class="bg-gradient-to-br 
+                    from-slate-100/80 via-slate-200/10 to-slate-300/50 rounded ">
+                        <h1 id="minutos" class="text-5xl px-[2vh] font-thin font-mono">00</h1>
                         <h2 class="my-[vh] font-thin">
                             min
                         </h2>
                     </div>
-                    <div id="cont-segundos" class="bg-gradient-to-br from-slate-100/80 via-slate-200/10 to-slate-300/50 rounded ">
-                        <h1 id="segundos" class="text-5xl px-[1vh] font-thin">00</h1>
+                    <div id="cont-segundos" class="bg-gradient-to-br 
+                    from-slate-100/80 via-slate-200/10 to-slate-300/50 rounded">
+                        <h1 id="segundos" class="text-5xl px-[2vh] font-thin font-mono">00</h1>
                         <h2 class="my-[vh] font-thin">
                             seg
                         </h2>
                     </div>
                 </div>
             </div>
-            <div class="py-[3vh] px-[10vw] text-center flex-col 
-            items-center justify-center md:px-[5vw] md:text-xl md:w-[40vw]">
+            <div class="py-[3vh] px-[10vw] text-center flex-col bg-slate-900/20 rounded shadow-2xl
+            items-center justify-center md:px-[5vw] md:mr-[5vw] md:text-xl md:w-[40vw] text-slate-50">
                 <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae debitis earum beatae amet corrupti reiciendis.
                 </p>
@@ -96,11 +99,12 @@
         md:grid-rows-2 md:max-h-[70vh] md:gap-8">
 
             <div class="col-span-3 row-span-1 bg-black flex-col justify-end relative
-            rounded overflow-hidden text-white hover:scale-102 transition-transform hover:contrast-80
+            rounded overflow-hidden text-slate-50 hover:scale-102 transition-transform hover:contrast-80
             md:col-span-1 md:row-span-1">
                 <div class="flex flex-col absolute top-1 left-2 z-10">
                     <h1 class="text-lg md:text-xl">Cine clasico</h1>
                     <h2 class="text-sm">09/09/25 - 19:30h</h2>
+                    <h2 class="text-sm">Valparaiso</h2>
                 </div>
                 <img src="img/audience.jpg" alt="" class="absolute h-[20vh] 
                 w-[40vw] opacity-85 object-cover -right-2 z-0
@@ -111,11 +115,12 @@
             </div>
 
             <div class="col-span-3 row-span-1 bg-cyan-950 flex-col justify-end relative
-            rounded overflow-hidden text-white hover:scale-102 hover:contrast-80 transtion
+            rounded overflow-hidden text-slate-50 hover:scale-102 hover:contrast-80 transtion
             md:col-span-2 md:row-span-2">
                 <div class="flex flex-col absolute top-1 left-2 z-10">
                     <h1 class="text-lg md:text-xl">Conferencia</h1>
                     <h2 class="text-sm">25/10/25 - 13:00h</h2>
+                    <h2 class="text-sm">Concepción</h2>
                 </div>
                 <img src="img/conference.jpg" alt="" class="absolute h-[20vh] 
                 w-[40vw] opacity-85 object-cover -right-2 z-0
@@ -126,11 +131,11 @@
             </div>
 
             <div class="col-span-3 row-span-1 bg-red-950 flex-col justify-end relative
-            rounded overflow-hidden text-white hover:scale-102 transtion hover:contrast-80
+            rounded overflow-hidden text-slate-50 hover:scale-102 transtion hover:contrast-80
             md:col-span-1 md:row-span-1">
                 <div class="flex flex-col absolute top-1 left-2 z-10">
                     <h1 class="text-lg md:text-xl">Robotica</h1>
-                    <h2 class="text-sm">01/11/25 - 15:00h</h2>
+                    <h2 class="text-sm">01/11/25 - 15:00h</h2><h2 class="text-sm">Santiago de Chile</h2>
                 </div>
                 <img src="img/robotica.jpg" alt="" class="absolute h-[20vh] 
                 w-[40vw] opacity-85 object-cover -right-2 z-0
@@ -143,7 +148,7 @@
         </div>
     </section>
 
-    <section id="comunidad" class="bg-slate-700 min-h-[85vh] md:py-[4vh]">
+    <section id="comunidad" class="bg-slate-700 min-h-[80vh] md:py-[4vh]">
         <div class="grid grid-cols-2 grid-rows-4 py-[3vh] px-[3vw] overflow-auto 
         md:grid-cols-2 md:grid-rows-4 md:gap-3">
             <div id="caja_comentarios" class="bg-slate-800 col-span-2 rounded row-span-2 h-[35vh] flex flex-col gap-4
@@ -164,22 +169,22 @@
             </div>
             <div id="formulario" class="col-span-2 row-span-2 my-[-1vh] 
             md:py-[1vh] md:col-span-1 md:row-span-4">
-                <div class="bg-slate-200 flex flex-col min-h-[39vh] px-[2vw] py-[1vw] gap-3 rounded
+                <div class="bg-slate-800 flex flex-col min-h-[39vh] px-[2vw] py-[1vw] gap-3 rounded
                 md:h-[70vh] ">
                     <div class="flex flex-col">
-                        <label for="nombre" class="text-sm">Nombre / Alias* :</label>
-                        <input id="usuario" type="text" class="bg-slate-500 rounded text-ms text-white font-thin " placeholder="Nombre" required>
+                        <label for="nombre" class="text-sm text-slate-50">Nombre / Alias* :</label>
+                        <input id="usuario" type="text" class="bg-slate-500 rounded text-ms text-slate-50 font-thin " placeholder="Nombre" required>
                     </div>
                     <div class="flex flex-col">
-                        <label for="mensaje">Mensaje*: </label>
+                        <label for="mensaje" class="text-slate-50">Mensaje*: </label>
                         <textarea id="mensaje" name="" id="" maxlength="500" placeholder="Mensaje..." 
-                        class="bg-slate-500 h-[15vh] rounded text-ms text-white font-thin
+                        class="bg-slate-500 h-[15vh] rounded text-ms text-slate-50 font-thin
                         md:h-[40vh]">
                         </textarea>
                     </div>
                     <div class="flex justify-center">
                         <button onclick="publicar()" class="bg-slate-400 rounded w-[30vw] hover:scale-105 transition-transform
-                        md:w-[12vw] md:my-[2vh] text-white font-semibold">
+                        md:w-[12vw] md:my-[2vh] text-slate-50 font-semibold">
                             Publicar
                         </button>
                     </div>
@@ -189,7 +194,7 @@
         </div>
     </section>
 
-    <footer class="bg-black h-[5vh]">
+    <footer class="bg-black h-[10vh]">
     </footer>
 
     
