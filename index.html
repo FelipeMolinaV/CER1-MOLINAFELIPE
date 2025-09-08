@@ -1,6 +1,3 @@
-
-
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -10,20 +7,23 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-    <script src="js/funciones.js"></script>
+    <script src="js/menu.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
     <script src="js/contador.js"></script>
     <script src="js/publicar.js"></script>
 </head>
 <body onmouseover="contador()" class="bg-black">
 
+    <!-- header/Barra de navegacion -->
     <header class="fixed top-0 left-0 w-full z-50">
         <nav class="bg-black h-[10vh] flex-row md:flex">
+            <!-- Logo y boton desplegable -->
             <div class="flex items-center justify-between px-[8vw]">
                 <img src="img/logo.png" alt="" class="max-h-[10vh]  object-fill">
                 <ion-icon id="boton_menu" name="menu-outline" onclick="desplegar_menu(this)" 
                 class="text-3xl invert hover:scale-115 transition-transform md:hidden"></ion-icon>
             </div>
+            <!-- opciones del menu -->
             <ul id="menu" class="text-slate-50 px-[8vw] static bg-slate-600 w-full left-0 opacity-0
             pt-[1vh] md:bg-transparent md:flex md:items-center md:justify-end 
             md:px-[5vw] md:opacity-100 pointer-events-none md:pointer-events-auto">
@@ -39,9 +39,11 @@
             </ul>
         </nav>
     </header>
-
-    <main id="principal" class="text-slate-50 mt-[10vh] bg-slate-950 h-[90vh]">
+    <!-- Principal -->
+    <main id="principal" class="text-slate-50 mt-[10vh] bg-slate-950 h-[90vh] xl:px-[4vw]">
+        <!-- Contenedor flex -->
         <div class="md:flex md:items-center md:py-[3vh]">
+            <!-- Evento en hero -->
             <div class="flex flex-col justify-center text-center py-[5vh]
             hover:scale-97 transition-transform shadow-xl
             md:py-[5vh] md:px-[5vw]">
@@ -81,23 +83,26 @@
                     </div>
                 </div>
             </div>
-            <div class="py-[3vh] px-[10vw] text-center flex-col bg-slate-900/20 rounded shadow-2xl
+            <!-- CTA -->
+            <div class="py-[3vh] px-[10vw] text-center flex-col md:bg-slate-900/20 md:rounded shadow-2xl
             items-center justify-center md:px-[5vw] md:mr-[5vw] md:text-xl md:w-[40vw] text-slate-50">
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae debitis earum beatae amet corrupti reiciendis.
+                    ¿Quieres promocionar tu evento?
+                    Promociona actividades culturales y educativas en nuestra plataforma.                
                 </p>
                 <button type="button" class="bg-slate-400 h-[8vh] w-[40vw] my-[5vh] 
                 rounded hover:scale-105 transition-transform text-xl font-bold md:w-[20vw]">
-                    Boton
+                    Contactanos
                 </button>
             </div>
         </div>
     </main>
-
-    <section id="eventos" class="bg-slate-200 h-[90vh] scroll-mt-[10vh] py-[10vh] md:py-[10vh]">
+    <!-- Eventos -->
+    <section id="eventos" class="bg-slate-200 h-[90vh] scroll-mt-[10vh] py-[10vh] md:py-[10vh] xl:px-[4vw]">
+        <!-- Contenedor de la grilla para cada card -->
         <div class="h-[90vh] grid grid-cols-3 grid-rows-4 gap-5 px-[10vw]
         md:grid-rows-2 md:max-h-[70vh] md:gap-8">
-
+            <!-- Card del evento, se repite la misma estructura en las siguientes -->
             <div class="col-span-3 row-span-1 bg-black flex-col justify-end relative
             rounded overflow-hidden text-slate-50 hover:scale-102 transition-transform hover:contrast-80
             md:col-span-1 md:row-span-1">
@@ -113,7 +118,6 @@
                     5000 CL
                 </h1>
             </div>
-
             <div class="col-span-3 row-span-1 bg-cyan-950 flex-col justify-end relative
             rounded overflow-hidden text-slate-50 hover:scale-102 hover:contrast-80 transtion
             md:col-span-2 md:row-span-2">
@@ -129,7 +133,6 @@
                     3500 CL
                 </h1>
             </div>
-
             <div class="col-span-3 row-span-1 bg-red-950 flex-col justify-end relative
             rounded overflow-hidden text-slate-50 hover:scale-102 transtion hover:contrast-80
             md:col-span-1 md:row-span-1">
@@ -144,16 +147,17 @@
                     1000 CL
                 </h1>
             </div>
-            
         </div>
     </section>
-
-    <section id="comunidad" class="bg-slate-700 min-h-[80vh] md:py-[4vh]">
+    <!-- Comunidad -->
+    <section id="comunidad" class="bg-slate-700 min-h-[80vh] md:py-[4vh] xl:px-[11vw]">
+        <!-- Contenedor grilla para ordenar muro de comentarios y formulario -->
         <div class="grid grid-cols-2 grid-rows-4 py-[3vh] px-[3vw] overflow-auto 
         md:grid-cols-2 md:grid-rows-4 md:gap-3">
+            <!-- Comentarios -->
             <div id="caja_comentarios" class="bg-slate-800 col-span-2 rounded row-span-2 h-[35vh] flex flex-col gap-4
             md:col-span-1 md:row-span-4 md:h-[70vh] overflow-auto">
-                <div id="comentario" class="bg-slate-200 rounded flex flex-col px-[2vw] gap-[1vh]
+                <div id="comentario" class="bg-slate-300 rounded flex flex-col px-[2vw] gap-[1vh]
                 md:px-[1vw]">
                     <div class="flex justify-between">
                         <h1 id="alias" class="text-sm">Usuario1</h1>
@@ -164,27 +168,26 @@
                             Primer comentario!
                         </p>
                     </div>
-                </div>
-                
+                </div>     
             </div>
+            <!-- Formulario -->
             <div id="formulario" class="col-span-2 row-span-2 my-[-1vh] 
             md:py-[1vh] md:col-span-1 md:row-span-4">
                 <div class="bg-slate-800 flex flex-col min-h-[39vh] px-[2vw] py-[1vw] gap-3 rounded
                 md:h-[70vh] ">
                     <div class="flex flex-col">
                         <label for="nombre" class="text-sm text-slate-50">Nombre / Alias* :</label>
-                        <input id="usuario" type="text" class="bg-slate-500 rounded text-ms text-slate-50 font-thin " placeholder="Nombre" required>
+                        <input id="usuario" type="text" class="bg-slate-300 rounded text-ms text-black font-thin " placeholder="Nombre" required>
                     </div>
                     <div class="flex flex-col">
                         <label for="mensaje" class="text-slate-50">Mensaje*: </label>
-                        <textarea id="mensaje" name="" id="" maxlength="500" placeholder="Mensaje..." 
-                        class="bg-slate-500 h-[15vh] rounded text-ms text-slate-50 font-thin
-                        md:h-[40vh]">
-                        </textarea>
+                        <textarea id="mensaje" name="" id="" maxlength="500" wrap="hard" placeholder="Mensaje..." 
+                        class="bg-slate-300 h-[15vh] rounded text-ms text-black font-thin
+                        md:h-[40vh]"></textarea>
                     </div>
                     <div class="flex justify-center">
-                        <button onclick="publicar()" class="bg-slate-400 rounded w-[30vw] hover:scale-105 transition-transform
-                        md:w-[12vw] md:my-[2vh] text-slate-50 font-semibold">
+                        <button onclick="publicar()" class="bg-slate-300 rounded w-[30vw] hover:scale-105 transition-transform
+                        md:w-[12vw] md:my-[2vh] text-black font-thin">
                             Publicar
                         </button>
                     </div>
@@ -194,7 +197,8 @@
         </div>
     </section>
 
-    <footer class="bg-black h-[10vh]">
+    <footer class="bg-black h-[10vh] text-sm text-slate-50/70 flex items-center px-[4vw]">
+        <p>&copy; Smart Events</p>
     </footer>
 
     

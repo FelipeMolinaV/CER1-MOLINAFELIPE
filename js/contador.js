@@ -1,11 +1,14 @@
 var intervalo = setInterval(contador, 1000);
 
 var fechaActual = dayjs(new Date)
-var fechaLimite = fechaActual.add(3, 'h')
+var fechaLimite = fechaActual.add(1.5, 'm')
+
 var escalaIcono = 100;
 
 function contador(){
 
+    // Repartir la diferencia de milisegundos totales entre la fecha actual
+    // y la fecha limite en dias, horas, minutos y segundos
     var tiempoContador = dayjs(new Date)
     var milisegundosRestantes = fechaLimite.diff(tiempoContador)
     var diasRestantes = Math.floor(milisegundosRestantes / (1000 * 60 * 60 * 24));
@@ -13,6 +16,7 @@ function contador(){
     var minutosRestantes = Math.floor((milisegundosRestantes % (1000 * 60 * 60)) / (1000 * 60));
     let segundosRestantes = Math.floor((milisegundosRestantes % (1000 * 60)) / 1000);   
     
+    // Desplegar contador o mensaje final
     if (segundosRestantes >= 0){
         var dias = document.getElementById("dias")
             .innerText = (diasRestantes.toString().length == 1) 
@@ -52,6 +56,5 @@ function contador(){
     }
 }
 
-//setInterval(contador, 1000)
 
 
